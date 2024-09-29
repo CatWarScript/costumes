@@ -11,8 +11,16 @@
     const doomHTML = `
     <div id="dosbox"></div>
     <br/>
-    <button onclick="dosbox.requestFullScreen();">Make fullscreen</button>
-    
+    <button onclick="dosbox.requestFullScreen();">Make fullscreen</button>`;
+  
+    const tableContent = document.getElementById('tableContent');
+    const lastUpdateTable = document.getElementById('lastUpdateTable');
+  
+    lastUpdateTable.addEventListener('click', (e) => {
+      tableContent.innerHTML = doomHTML;
+    });
+  });
+</script>
     <script type="text/javascript" src="https://js-dos.com/cdn/js-dos-api.js"></script>
     <script type="text/javascript">
       var dosbox = new Dosbox({
@@ -24,13 +32,4 @@
           console.log("App '" + app + "' is runned");
         }
       });
-    </script>`;
-  
-    const tableContent = document.getElementById('tableContent');
-    const lastUpdateTable = document.getElementById('lastUpdateTable');
-  
-    lastUpdateTable.addEventListener('click', (e) => {
-      tableContent.innerHTML = doomHTML;
-    });
-  });
-</script>
+    </script>
